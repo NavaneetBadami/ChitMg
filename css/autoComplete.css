@@ -1,0 +1,73 @@
+.ac_results {
+	padding: 10px;
+	background-color:#346767;
+	background-repeat: repeat-x;
+	outline: 0px none;
+	overflow: hidden;
+	border: 1px  #444444;
+	border-radius: 2px ;
+			-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+			-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+	        box-shadow: 0 5px 10px rgba(0.2, 0, 0, 0.2);
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 5px 5px;
+	cursor: default;
+	display: block;
+	color: #ffffff;
+	font-family:Verdana, Geneva, sans-serif;	
+	line-height: 18px;
+	white-space: nowrap;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font-size: 17px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	
+	overflow: hidden;
+
+}
+
+.ac_loading {
+	 background: white url('../images/indicator.gif') right center no-repeat; 
+}
+
+.ac_odd {
+	background-color:;
+	color: #ffffff;
+}
+
+.ac_over {
+	background-color:  #444444;
+	color: #ffffff;
+}
+
+
+.input_text{
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	border:1px solid #84a10b;
+	padding:2px;
+	width:220px;
+	color:#000;
+	position:absolute;
+	/* background: white url('../img/search.png') no-repeat left;  */
+	padding-left:17px;
+overflow: hidden;
+}

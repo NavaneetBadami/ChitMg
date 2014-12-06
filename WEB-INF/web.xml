@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>CMC</display-name>
+	
+	<welcome-file-list>
+		<welcome-file>main-index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<session-config>
+		<session-timeout>15</session-timeout>
+	</session-config>
+	
+	<!-- SMTP settings -->
+	<context-param>
+		<param-name>host</param-name>
+		<param-value>smtp.gmail.com</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>port</param-name>
+		<param-value>587</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>user</param-name>
+		<param-value>WeRiseChit@Gmail.com</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>pass</param-name>
+		<param-value>werisechit14</param-value>
+	</context-param>
+	
+	<!-- End of SMTP settings -->
+	<servlet>
+		<servlet-name>AdminLoginController</servlet-name>
+		<servlet-class>com.riseon.chitfund.controller.AdminLoginController</servlet-class>	
+		</servlet>
+		<servlet-mapping>
+		<servlet-name>AdminLoginController</servlet-name>
+		<url-pattern>/adminLoginUrl</url-pattern>
+		</servlet-mapping>
+		
+	<servlet>  
+		<servlet-name>AgentLoginServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.AgentLoginController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>AgentLoginServlet</servlet-name>  
+		<url-pattern>/agentloginUrl</url-pattern>  
+		</servlet-mapping>  
+	
+	<servlet>
+		<servlet-name>ChangePassController</servlet-name>
+		<servlet-class>com.riseon.chitfund.controller.ChangePassController</servlet-class>	
+		</servlet>
+		<servlet-mapping>
+		<servlet-name>ChangePassController</servlet-name>
+		<url-pattern>/loadVal</url-pattern>
+		</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>AddAgentServlet</servlet-name>
+		<servlet-class>com.riseon.chitfund.controller.AddAgentController</servlet-class>	
+		</servlet>
+		<servlet-mapping>
+		<servlet-name>AddAgentServlet</servlet-name>
+		<url-pattern>/addAgent</url-pattern>
+		</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>AgentImageServlet</servlet-name>
+		<servlet-class>com.riseon.chitfund.support.AgentImage</servlet-class>	
+		</servlet>
+		<servlet-mapping>
+		<servlet-name>AgentImageServlet</servlet-name>
+		<url-pattern>/agentImage</url-pattern>
+		</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>AgentIdServlet</servlet-name>
+		<servlet-class>com.riseon.chitfund.support.AgentIdImage</servlet-class>	
+		</servlet>
+		<servlet-mapping>
+		<servlet-name>AgentIdServlet</servlet-name>
+		<url-pattern>/agentIdImage</url-pattern>
+		</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>psm</servlet-name>
+		<servlet-class>com.riseon.chitfund.controller.AdminController</servlet-class>
+		</servlet>
+		<servlet-mapping>
+		<servlet-name>psm</servlet-name>
+		<url-pattern>/loginurl</url-pattern>
+		</servlet-mapping>
+		
+	<servlet>
+	    <servlet-name>ContactController</servlet-name>
+	    <servlet-class>com.riseon.chitfund.controller.ContactController</servlet-class>
+	  	</servlet>
+	 	 <servlet-mapping>
+	    <servlet-name>ContactController</servlet-name>
+	    <url-pattern>/contactUsUrl</url-pattern>
+	  	</servlet-mapping>
+	  	
+	 <servlet>
+	    <servlet-name>AgentDetailsController</servlet-name>
+	    <servlet-class>com.riseon.chitfund.controller.AgentDetailsController</servlet-class>
+	  	</servlet>
+	 	 <servlet-mapping>
+	    <servlet-name>AgentDetailsController</servlet-name>
+	    <url-pattern>/disp_agtDetails</url-pattern>
+	  	</servlet-mapping>
+	 
+	 <servlet>
+	    <servlet-name>AddSchemeController</servlet-name>
+	    <servlet-class>com.riseon.chitfund.controller.AddSchemeController</servlet-class>
+	  	</servlet>
+	 	 <servlet-mapping>
+	    <servlet-name>AddSchemeController</servlet-name>
+	    <url-pattern>/addSchemeUrl</url-pattern>
+	  	</servlet-mapping>
+	  	
+	  <servlet>
+	    <servlet-name>SelectedSchemeController</servlet-name>
+	    <servlet-class>com.riseon.chitfund.controller.RegisterController</servlet-class>
+	  	</servlet>
+	 	 <servlet-mapping>
+	    <servlet-name>SelectedSchemeController</servlet-name>
+	    <url-pattern>/selectSchemeUrl</url-pattern>
+	  	</servlet-mapping>
+	  	
+	  <servlet>
+	    <servlet-name>AgentLoginController</servlet-name>
+	    <servlet-class>com.riseon.chitfund.controller.AgentCheckController</servlet-class>
+	  	</servlet>
+	 	 <servlet-mapping>
+	    <servlet-name>AgentLoginController</servlet-name>
+	    <url-pattern>/agentLoginUrl</url-pattern>
+	  	</servlet-mapping>
+	  	
+	  <servlet>
+	    <servlet-name>iu</servlet-name>
+	    <servlet-class>com.riseon.chitfund.supports.AgentImageUpload</servlet-class>
+	  	</servlet>
+	 	 <servlet-mapping>
+	    <servlet-name>iu</servlet-name>
+	    <url-pattern>/img</url-pattern>
+	  	</servlet-mapping>
+	  	
+	  	
+	<servlet>  
+		<servlet-name>UploadServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.supports.chimg</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>UploadServlet</servlet-name>  
+		<url-pattern>/go</url-pattern>  
+		</servlet-mapping>  
+		
+	<servlet>  
+		<servlet-name>AddMemberServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.AddMemberController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>AddMemberServlet</servlet-name>  
+		<url-pattern>/addMemberUrl</url-pattern>  
+		</servlet-mapping>  
+	
+	<servlet>  
+		<servlet-name>AddNewMemberServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.UpdateGroupController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>AddNewMemberServlet</servlet-name>  
+		<url-pattern>/addNewMemberUrl</url-pattern>  
+		</servlet-mapping>
+    
+    <servlet>  
+		<servlet-name>CreateGrpServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.CreateGroupController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>CreateGrpServlet</servlet-name>  
+		<url-pattern>/crtGrpUrl</url-pattern>  
+		</servlet-mapping> 
+	
+	<servlet>  
+		<servlet-name>GrpDetailsServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.GroupDetailsController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>GrpDetailsServlet</servlet-name>  
+		<url-pattern>/grpDetailsUrl</url-pattern>  
+		</servlet-mapping>   
+		
+	<servlet>  
+		<servlet-name>AuctionValServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.AuctionValController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>AuctionValServlet</servlet-name>  
+		<url-pattern>/auctionValidateUrl</url-pattern>  
+		</servlet-mapping>  
+		
+	<servlet>  
+		<servlet-name>AuctionProcessServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.AuctionProcessController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>AuctionProcessServlet</servlet-name>  
+		<url-pattern>/auctionProcessUrl</url-pattern>  
+		</servlet-mapping>  
+		
+	<servlet>  
+		<servlet-name>AuctionHistoryServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.AuctionHistoryController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>AuctionHistoryServlet</servlet-name>  
+		<url-pattern>/auctionHistoryUrl</url-pattern>  
+		</servlet-mapping>
+		
+	<servlet>  
+		<servlet-name>ForgetUnPwServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.ForgetUnPwController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>ForgetUnPwServlet</servlet-name>  
+		<url-pattern>/forgetUnPwUrl</url-pattern>  
+		</servlet-mapping>    
+		
+	<servlet>  
+		<servlet-name>SchemeStatusServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.SchemeStatusController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>SchemeStatusServlet</servlet-name>  
+		<url-pattern>/schStatusUrl</url-pattern>  
+		</servlet-mapping>
+		
+	<servlet>  
+		<servlet-name>UpdateAgentServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.UpdateAgentContoller</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>UpdateAgentServlet</servlet-name>  
+		<url-pattern>/AgtUpdateUrl</url-pattern>  
+		</servlet-mapping>
+		
+	<servlet>  
+		<servlet-name>MemberLoginServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.MemberLoginController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>MemberLoginServlet</servlet-name>  
+		<url-pattern>/memLoginUrl</url-pattern>  
+		</servlet-mapping>
+		
+	<servlet>  
+		<servlet-name>DeleteMemberServlet</servlet-name>  
+		<servlet-class>com.riseon.chitfund.controller.DeleteMemberController</servlet-class>  
+		</servlet>  
+		<servlet-mapping>  
+		<servlet-name>DeleteMemberServlet</servlet-name>  
+		<url-pattern>/dltMemUrl</url-pattern>  
+		</servlet-mapping>
+</web-app>
